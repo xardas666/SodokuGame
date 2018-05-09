@@ -18,3 +18,6 @@ Számbeállító widgetekkel 9x9 sudoku Néhány pályát lehessen megoldani, am
 Extra pont lehetőségek:
 
 pályagenerátor, ami egyértelműen megoldható pályát tud generálni.
+
+http://users.itk.ppke.hu/~flugi/grafikuslib/graphics.html
+https://wiki.itk.ppke.hu/twiki/bin/view/PPKE/BevProg2Gyak1718HarmadikBead
