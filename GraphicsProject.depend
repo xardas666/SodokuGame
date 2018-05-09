@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1525888921 source:c:\users\gottf\documents\sodokugame\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<vector>
+	<iostream>
+	<fstream>
+	"Widget.h"
+	"Counter.h"
+
+1491150744 c:\users\gottf\documents\sodokugame\include\graphics.hpp
+	<string>
+
+1525889030 c:\users\gottf\documents\sodokugame\include\widget.h
+	"graphics.hpp"
+	"vector"
+	"string"
+
+1525889107 c:\users\gottf\documents\sodokugame\include\counter.h
+	"sstream"
+	"graphics.hpp"
+	"Widget.h"
+	"string"
+
