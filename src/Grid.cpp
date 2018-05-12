@@ -14,6 +14,7 @@ void Grid::draw()
 int cellameret=50;
 meretX=450;
 meretY=450;
+int C=1;
 int r,g,b;
 for(int i=0; i<10;i++){
         if(i==0 || i==3 || i==6 || i==9){r=250 ; g=0; b=250;}
@@ -22,9 +23,10 @@ for(int i=0; i<10;i++){
     gout << color(r,g,b) << move_to(x,y+(i*cellameret)) << line_to(x+meretX,y+(i*cellameret));
     for(int i=1;i<=9;i++){
             for(int j=1;j<=9;j++){
+
                 string T;
                 stringstream ss;
-                ss << i;
+                ss << i*10+j;
                 ss >> T;
                 gout << color(60,255,6) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);
             }
@@ -40,25 +42,35 @@ void Grid::eventHandler(genv::event bv){
         {
             if (isOver(&bv.pos_x, &bv.pos_y))
                 _checked = ! _checked;
+
+                //leptet
+                int V;
+                int B;
+                if(bv.pos_x<=50  && bv.pos_x>=0)  {V=1;}
+                if(bv.pos_x<=100 && bv.pos_x>=50) {V=2;}
+                if(bv.pos_x<=150 && bv.pos_x>=100){V=3;}
+                if(bv.pos_x<=200 && bv.pos_x>=150){V=4;}
+                if(bv.pos_x<=250 && bv.pos_x>=200){V=5;}
+                if(bv.pos_x<=300 && bv.pos_x>=250){V=6;}
+                if(bv.pos_x<=350 && bv.pos_x>=300){V=7;}
+                if(bv.pos_x<=400 && bv.pos_x>=350){V=8;}
+                if(bv.pos_x<=450 && bv.pos_x>=400){V=9;}
+
+                if(bv.pos_y<=50  && bv.pos_y>=0)  {B=1;}
+                if(bv.pos_y<=100 && bv.pos_y>=50) {B=2;}
+                if(bv.pos_y<=150 && bv.pos_y>=100){B=3;}
+                if(bv.pos_y<=200 && bv.pos_y>=150){B=4;}
+                if(bv.pos_y<=250 && bv.pos_y>=200){B=5;}
+                if(bv.pos_y<=300 && bv.pos_y>=250){B=6;}
+                if(bv.pos_y<=350 && bv.pos_y>=300){B=7;}
+                if(bv.pos_y<=400 && bv.pos_y>=350){B=8;}
+                if(bv.pos_y<=450 && bv.pos_y>=400){B=9;}
+
+
+
+                cout << B << " " << V << endl;
         }
-        if((((meretX/5))+x)>=bv.pos_x && (meretY+y)>=bv.pos_y && x <=bv.pos_x && y <=bv.pos_y && bv.button==btn_left  )
-            //csökkent
-        {
-            string vText;
-            stringstream sz;
-            value--;
-            sz << value;
-            sz >> vText;
-        }
-        if(((((meretX/5)*4))+x)<=bv.pos_x && (meretY+y)>=bv.pos_y && x+meretX >=bv.pos_x && y <=bv.pos_y && bv.button==btn_left )
-            //növel
-        {
-            string vText;
-            stringstream sz;
-            value++;
-            sz << value;
-            sz >> vText;
-        }
+
     }
     if(bv.type==ev_key)
     {
