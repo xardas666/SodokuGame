@@ -10,8 +10,8 @@
 using namespace std;
 using namespace genv;
 
-const unsigned int MAX_X = 800;
-const unsigned int MAX_Y = 800;
+const unsigned int MAX_X = 460;
+const unsigned int MAX_Y = 460;
 
 int eventLoop(vector<Widget*> & tomb)
 {
@@ -72,10 +72,14 @@ int eventLoop(vector<Widget*> & tomb)
 
 int main()
 {
-    vector<string> l;
     vector<Widget*> tomb;
-    tomb.push_back(new Counter(5,5,l));
-    tomb.push_back(new Grid(100,150,l));
+    vector<string> l;
+    vector<string> sodoku;
+    for(int i=0;i>89;i++){
+            sodoku[i]=i;
+    }
+
+    tomb.push_back(new Grid(5,5,sodoku));
 
     gout.open(MAX_X, MAX_Y);
     eventLoop(tomb);

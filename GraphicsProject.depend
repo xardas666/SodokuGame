@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1526129302 source:c:\users\gottf\documents\sodokugame\main.cpp
+1526134952 source:c:\users\gottf\documents\sodokugame\main.cpp
 	"graphics.hpp"
 	<iostream>
 	<vector>
@@ -36,7 +36,7 @@
 	"Widget.h"
 	<iostream>
 
-1526129894 source:c:\users\gottf\documents\sodokugame\src\grid.cpp
+1526135091 source:c:\users\gottf\documents\sodokugame\src\grid.cpp
 	"Grid.h"
 	"graphics.hpp"
 	"iostream"
@@ -50,4 +50,9 @@
 	"graphics.hpp"
 	"Widget.h"
 	"string"
+
+1526132885 source:c:\users\gottf\documents\sodokugame\src\gamemaster.cpp
+	"GameMaster.h"
+
+1526132885 c:\users\gottf\documents\sodokugame\include\gamemaster.h
 
