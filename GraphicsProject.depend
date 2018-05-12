@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1525888921 source:c:\users\gottf\documents\sodokugame\main.cpp
+1526129302 source:c:\users\gottf\documents\sodokugame\main.cpp
 	"graphics.hpp"
 	<iostream>
 	<vector>
@@ -7,16 +7,45 @@
 	<fstream>
 	"Widget.h"
 	"Counter.h"
+	"Grid.h"
 
 1491150744 c:\users\gottf\documents\sodokugame\include\graphics.hpp
 	<string>
 
-1525889030 c:\users\gottf\documents\sodokugame\include\widget.h
+1526127910 c:\users\gottf\documents\sodokugame\include\widget.h
 	"graphics.hpp"
 	"vector"
 	"string"
 
-1525889107 c:\users\gottf\documents\sodokugame\include\counter.h
+1526127910 c:\users\gottf\documents\sodokugame\include\counter.h
+	"sstream"
+	"graphics.hpp"
+	"Widget.h"
+	"string"
+
+1525889107 source:c:\users\gottf\documents\sodokugame\src\counter.cpp
+	"Counter.h"
+	"graphics.hpp"
+	"iostream"
+	"sstream"
+	"string"
+	"cstdlib"
+	<stdio.h>
+
+1525889030 source:c:\users\gottf\documents\sodokugame\src\widget.cpp
+	"Widget.h"
+	<iostream>
+
+1526129894 source:c:\users\gottf\documents\sodokugame\src\grid.cpp
+	"Grid.h"
+	"graphics.hpp"
+	"iostream"
+	"sstream"
+	"string"
+	"cstdlib"
+	<stdio.h>
+
+1526128348 c:\users\gottf\documents\sodokugame\include\grid.h
 	"sstream"
 	"graphics.hpp"
 	"Widget.h"

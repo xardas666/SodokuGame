@@ -5,12 +5,13 @@
 #include <fstream>
 #include "Widget.h"
 #include "Counter.h"
+#include "Grid.h"
 
 using namespace std;
 using namespace genv;
 
-const unsigned int MAX_X = 400;
-const unsigned int MAX_Y = 400;
+const unsigned int MAX_X = 800;
+const unsigned int MAX_Y = 800;
 
 int eventLoop(vector<Widget*> & tomb)
 {
@@ -72,15 +73,11 @@ int eventLoop(vector<Widget*> & tomb)
 int main()
 {
     vector<string> l;
-
-
     vector<Widget*> tomb;
-
-    tomb.push_back(new Counter(50,150,l));
-
+    tomb.push_back(new Counter(5,5,l));
+    tomb.push_back(new Grid(100,150,l));
 
     gout.open(MAX_X, MAX_Y);
-
     eventLoop(tomb);
 
     for(Widget *w : tomb)
