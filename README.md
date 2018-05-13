@@ -6,8 +6,11 @@ A feladat a meglevő widgetkészletet felhasználva és azt kibővítve egy egys
 
 A közös követelmények:
 
-a programnak le kell fordulnia, futnia kell, minden lehetséges felhasználói viselkedést programhiba nélkül kezelnie kell ("bolondbiztos")
-a programnak tartalmaznia kell a már megkezdett widgetkészletet. Minden olyan programkomponensnek, ami a képernyőre rajzol, widget leszármazottnak kell lennie. Az eseménykezelő komponensnek (pl "JatekMester") külön osztályban kell lennie, a main() függvényben nem szerepelhet graphicslib hivatkozás
+a programnak le kell fordulnia,
+futnia kell,
+minden lehetséges felhasználói viselkedést programhiba nélkül kezelnie kell ("bolondbiztos")
+a programnak tartalmaznia kell a már megkezdett widgetkészletet. Minden olyan programkomponensnek, ami a képernyőre rajzol, widget leszármazottnak kell lennie. 
+Az eseménykezelő komponensnek (pl "JatekMester") külön osztályban kell lennie, a main() függvényben nem szerepelhet graphicslib hivatkozás
 NEM kötelező a kétszemélyes játékokba gépi játékost írni, azonban extra pontot lehet érte kapni. Ilyen extra pontot csak az olyan játéknál lehet kapni, amelyikben van kihívás a gépi játékosban.
 A grafikus felület és a játéklogika külön osztályba kell kerüljön. Legjobb megoldás, ha a játékszabályokat a JátékMester osztály érvényesíti, és a vonatkozó widgetek csak megjelenítenek, illetve lépési szándékokat továbbítanak a JátékMesternek.
 A játékok implementálásakor érdemes maximalizálni a változtatás nélkül felhasznált widgetek körét, de ezen túl a játékra specializált widgetek létrehozása sokszor nem elkerülhető, sőt néha a legjobb megoldás. Mérlegelendő, hogy a játéktér felbontható-e widgetekre, vagy kényelmesebb-e egy nagy widgetként implementálni a játékteret. Mindkét irányzattal lehet maximumpontot kapni.
