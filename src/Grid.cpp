@@ -14,22 +14,39 @@ void Grid::draw()
 int cellameret=50;
 meretX=450;
 meretY=450;
-int C=1;
+
 int r,g,b;
 for(int i=0; i<10;i++){
         if(i==0 || i==3 || i==6 || i==9){r=250 ; g=0; b=250;}
         else {r=0; g=250; b=0;}
     gout << color(r,g,b) << move_to(x+(i*cellameret),y) << line_to(x+(i*cellameret),y+meretY);
     gout << color(r,g,b) << move_to(x,y+(i*cellameret)) << line_to(x+meretX,y+(i*cellameret));
-    for(int i=1;i<=9;i++){
-            for(int j=1;j<=9;j++){
+    for(int i=1;i<10;i++){
+            for(int j=1;j<10;j++){
 
                 string T;
                 stringstream ss;
-                ss << i*10+j;
+                ss << t[i-1][j-1];
                 ss >> T;
-                gout << color(60,255,6) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);
-            }
+                if(t[i-1][j-1]==0){gout << color(255,0,0) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);}
+                for(int c=1;c<10;c++){
+                    for(int k=1;k<10;k++){
+                            bool fu =true;
+                        if(t[i-1][j-1]==t[c-1][j-1] && i-1!=c-1 && t[i-1][j-1]!=0){
+                           gout << color(255,0,255) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);
+                            fu =false;
+                        }
+                        if(t[i-1][j-1]==t[i-1][k-1] && j-1!=k-1 && t[i-1][j-1]!=0){
+                           gout << color(255,0,255) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);
+                           fu =false;
+                        }
+                        if(fu==true) {gout << color(60,255,6) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);}
+
+                    }
+                }
+
+               // if(t[i-1][j-1]!=0){gout << color(60,255,6) << move_to(x+(i*cellameret-30),y+(j*cellameret-20)) << text(T);}
+    }
     }
 }
 }
@@ -66,31 +83,14 @@ void Grid::eventHandler(genv::event bv){
                 if(bv.pos_y<=400 && bv.pos_y>=350){B=8;}
                 if(bv.pos_y<=450 && bv.pos_y>=400){B=9;}
 
-
+                if(t[V-1][B-1]>=9){t[V-1][B-1]=0;}
+                if(t[V-1][B-1]>(-1) && t[V-1][B-1]<=8){t[V-1][B-1]++;}
 
                 cout << B << " " << V << endl;
         }
 
     }
-    if(bv.type==ev_key)
-    {
-        if(bv.keycode==key_pgdn)
-        {
-            string vText;
-            stringstream sz;
-            value--;
-            sz << value;
-            sz >> vText;
-        }
-        if(bv.keycode==key_pgup)
-        {
-            string vText;
-            stringstream sz;
-            value++;
-            sz << value;
-            sz >> vText;
-        }
-    }
+
 
 }
 

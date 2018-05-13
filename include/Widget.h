@@ -5,6 +5,7 @@
 #include "graphics.hpp"
 #include "vector"
 #include "string"
+#include "window.h"
 using namespace std;
 
 class Widget
@@ -15,9 +16,9 @@ protected:
     int meretY=40;
     bool selected = false;
     virtual bool isOver(int *px, int *py)=0;
-    std::vector<std::string> t;
+    std::vector<std::vector<int>> t;
 public:
-    Widget(int _x, int _y, std::vector<std::string> _t);
+    Widget(int _x, int _y, std::vector<std::vector<int>> _t);
     virtual ~Widget() {}
     virtual bool focus(int *px, int *py);
     void unfocus()

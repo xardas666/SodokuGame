@@ -43,10 +43,16 @@
 			<Add directory="lib" />
 		</Linker>
 		<Unit filename="include/Counter.h" />
+		<Unit filename="include/GameMaster.h" />
+		<Unit filename="include/Grid.h" />
 		<Unit filename="include/Widget.h" />
+		<Unit filename="include/window.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Counter.cpp" />
+		<Unit filename="src/GameMaster.cpp" />
+		<Unit filename="src/Grid.cpp" />
 		<Unit filename="src/Widget.cpp" />
+		<Unit filename="src/window.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

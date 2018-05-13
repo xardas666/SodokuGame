@@ -6,10 +6,13 @@
 #include "Widget.h"
 #include "Counter.h"
 #include "Grid.h"
+#include "window.h"
+#include "GameMaster.h"
+
 
 using namespace std;
 using namespace genv;
-
+//460
 const unsigned int MAX_X = 460;
 const unsigned int MAX_Y = 460;
 
@@ -73,14 +76,28 @@ int eventLoop(vector<Widget*> & tomb)
 int main()
 {
     vector<Widget*> tomb;
-    vector<string> l;
-    vector<string> sodoku;
-    for(int i=0;i>89;i++){
-            sodoku[i]=i;
+
+int no_of_cols = 9;
+int no_of_rows = 9;
+int initial_value = 0;
+
+std::vector<std::vector<int>> matrix;
+matrix.resize(no_of_rows, std::vector<int>(no_of_cols, initial_value));
+ifstream myfile ("1.txt");
+if (myfile.is_open()){
+for(int i=0;i<9;i++){
+    for(int j=0;j<9;j++){
+
+
+
+        myfile >> matrix[i][j];
+        cout << matrix[i][j];
     }
+    cout << endl;
+}}
 
-    tomb.push_back(new Grid(5,5,sodoku));
-
+    tomb.push_back(new Grid(5,5,matrix));
+  //  tomb.push_back(new GameMaster(5,5,matrixx));
     gout.open(MAX_X, MAX_Y);
     eventLoop(tomb);
 

@@ -1,11 +1,9 @@
 #include "GameMaster.h"
+#include <iostream>
+#include <vector>
 
-GameMaster::GameMaster()
-{
-    //ctor
-}
 
-GameMaster::~GameMaster()
-{
-    //dtor
-}
+    void GameMaster::draw(){;}
+    void GameMaster::eventHandler(genv::event bv){};
+    string GameMaster::getValue(){};
+    bool GameMaster::isOver(int *px, int *py){};

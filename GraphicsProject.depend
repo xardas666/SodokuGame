@@ -56,3 +56,73 @@
 
 1526132885 c:\users\gottf\documents\sodokugame\include\gamemaster.h
 
+1525889107 source:c:\users\gottf\documents\sd2\src\counter.cpp
+	"Counter.h"
+	"graphics.hpp"
+	"iostream"
+	"sstream"
+	"string"
+	"cstdlib"
+	<stdio.h>
+
+1526234926 c:\users\gottf\documents\sd2\include\counter.h
+	"sstream"
+	"graphics.hpp"
+	"Widget.h"
+	"string"
+
+1491150744 c:\users\gottf\documents\sd2\include\graphics.hpp
+	<string>
+
+1526251381 c:\users\gottf\documents\sd2\include\widget.h
+	"graphics.hpp"
+	"vector"
+	"string"
+	"window.h"
+
+1526242266 source:c:\users\gottf\documents\sd2\src\gamemaster.cpp
+	"GameMaster.h"
+	<iostream>
+	<vector>
+
+1526242138 c:\users\gottf\documents\sd2\include\gamemaster.h
+	"Widget.h"
+	<iostream>
+	<vector>
+
+1526251284 source:c:\users\gottf\documents\sd2\src\grid.cpp
+	"Grid.h"
+	"graphics.hpp"
+	"iostream"
+	"sstream"
+	"string"
+	"cstdlib"
+	<stdio.h>
+
+1526234932 c:\users\gottf\documents\sd2\include\grid.h
+	"sstream"
+	"graphics.hpp"
+	"Widget.h"
+	"string"
+
+1526234941 source:c:\users\gottf\documents\sd2\src\widget.cpp
+	"Widget.h"
+	<iostream>
+
+1526250685 source:c:\users\gottf\documents\sd2\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<vector>
+	<iostream>
+	<fstream>
+	"Widget.h"
+	"Counter.h"
+	"Grid.h"
+	"window.h"
+	"GameMaster.h"
+
+1526241240 c:\users\gottf\documents\sd2\include\window.h
+
+1526241240 source:c:\users\gottf\documents\sd2\src\window.cpp
+	"window.h"
+
